@@ -4,6 +4,7 @@
         <title>Taco Central</title>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <link rel="stylesheet" href="./styles/main.css" />
+        <script src="https://kit.fontawesome.com/7b5b177ebd.js" crossorigin="anonymous"></script>
     </head>
     <body>
        <header>
@@ -32,51 +33,62 @@
          </div>
        </header>
        <main>
-           <section id="about">
+           <section id="about" class="container">
                <h2 class="heading">About</h2>
-               <img src="http://placekitten.com/300/300" />
-               <p>
-                   Eu ribeye biltong pig elit magna sed 
-                   incididunt boudin cillum ut. Esse laboris 
-                   sint officia tongue duis velit commodo 
-                   drumstick turkey. Esse enim leberkas, 
-                   corned beef voluptate anim jerky boudin 
-                   aliquip consequat capicola spare ribs culpa 
-                   buffalo.
-                </p>
+               <div class="content">
+                    <img class="profile-img" src="http://placekitten.com/300/300" />
+                    <p class="profile-text">
+                        I'm baby copper mug migas distillery portland vegan brunch synth. DIY food truck woke, street art fanny pack leggings art party pinterest bespoke kale chips. Pug viral slow-carb before they sold out snackwave cred tumblr VHS. Locavore post-ironic knausgaard humblebrag pickled brunch +1 kombucha subway tile tilde brooklyn pinterest cred mumblecore. IPhone succulents yr selfies ennui. Ramps disrupt pitchfork, chillwave crucifix occupy poke cornhole brooklyn cray copper mug.
+
+                        Live-edge pitchfork flannel snackwave. Echo park tumblr polaroid single-origin coffee fixie viral listicle offal blue bottle man braid master cleanse artisan iceland. Pop-up asymmetrical tousled craft beer yuccie fam hoodie ramps quinoa listicle small batch cloud bread shabby chic tbh. Hashtag tumblr thundercats, semiotics bitters celiac salvia.
+
+                        Butcher pop-up XOXO sartorial kitsch, next level tofu tacos tousled. Hammock semiotics echo park, heirloom neutra iPhone vice chicharrones four dollar toast occupy pitchfork wayfarers knausgaard. Food truck man braid try-hard mustache tbh synth, sartorial hell of woke. Waistcoat cliche raw denim kinfolk live-edge PBR&B lo-fi snackwave fingerstache man bun gluten-free XOXO truffaut photo booth shoreditch. Prism poke palo santo, art party yuccie chambray vaporware hexagon keytar activated charcoal. Bespoke everyday carry williamsburg, biodiesel blog cloud bread slow-carb kinfolk unicorn hexagon hammock 8-bit succulents cliche meditation. Vice tilde chillwave, ugh next level chia artisan.
+
+                        Dummy text? More like dummy thicc text, amirite?
+                    </p>
+                </div>
            </section>
-           <section id="socials">
-               <h2 class="heading">Socials</h2>
-               <ul>
-                   <li>
-                       <a href="#">
-                           <img src="http://placekitten.com/50/50" />
-                       </a>
-                   </li>
-                   <li>
-                        <a href="#">
-                            <img src="http://placekitten.com/50/50" />
-                        </a>
-                   </li>
-                   <li>
-                        <a href="#">
-                            <img src="http://placekitten.com/50/50" />
-                        </a>
-                   </li>
-               </ul>
+           <section id="socials" class="container">
+                <h2 class="heading">Socials</h2>
+                <div class="content">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-twitch"></i>
+                            </a>
+                        </li>
+                        <li>
+                                <a href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                        </li>
+                        <li>
+                                <a href="#">
+                                    <i class="fab fa-tiktok"></i>
+                                </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
            </section>
-           <section>
-               <h2 class="heading">Contact</h2>
-               <form>
-                   <label for="name">Name: </label>
-                   <input name="name" type="text" />
-                   <label for="email">Email: </label>
-                   <input name="email" type="email" />
-                   <label for="message">Message: </label>
-                   <textarea name="message" placeholder="Type your message here. Leave tacos">
-                   </textarea>
-                   <input type="submit"/>
-               </form>
+           <section class="container">
+                <div class="content">
+                    <h2 class="heading">Contact</h2>
+                    <form>
+                        <label for="name">Name: </label>
+                        <input name="name" type="text" />
+                        <label for="email">Email: </label>
+                        <input name="email" type="email" />
+                        <label for="message">Message: </label>
+                        <textarea name="message" placeholder="Type your message here. Leave tacos">
+                        </textarea>
+                        <input type="submit"/>
+                    </form>
+                </div>
            </section>
        </main>
        <footer>

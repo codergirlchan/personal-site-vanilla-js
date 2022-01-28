@@ -5,14 +5,36 @@ html,body {
     margin: 0;
     padding: 0;
     font-size: 14px;
+    font-family: 'Oswald', sans-serif;
 }
 
 .heading {
+    font-weight: 600;
     text-align: center;
     text-transform: uppercase;
-    font-size: 40px;
+    font-size: 60px;
     color: blueviolet;
     text-decoration: underline;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+.content {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+@media (min-width: 767px) { 
+    .heading {
+        margin-bottom: 70px;
+    }
 }
 
 /* Navigation Styles */
@@ -22,9 +44,14 @@ nav {
     width: 100%;
     position: fixed;
     z-index: 10;
-    height: 50px;
+    height: 60px;
     transition: height 300ms linear;
 } 
+
+#nav-toggle {
+    position: absolute;
+    right: 0;
+}
 
 #nav-toggle,
 #nav-toggle:after, 
@@ -32,9 +59,11 @@ nav {
     display: inline-block;
     overflow: visible;
     margin: 0;
-    padding: 15px;
+    padding: 17px;
     cursor: pointer;
-    transition: opacity .15s linear, filter .15s linear;
+    transition-timing-function: linear;
+    transition-duration: .15s;
+    transition-property: opacity,filter;
     text-transform: none;
     color: inherit;
     border: 0;
@@ -50,8 +79,17 @@ nav {
 
 .nav-toggle-inner {
     top: 50%;
-    display: block;
+    position: absolute;
     margin-top: -2px;
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(.55,.055,.675,.19);
+    transition-duration: 75ms;
+}
+
+.nav-toggle-inner,
+.nav-toggle-inner:after, 
+.nav-toggle-inner:before {
+    display: block;
     position: absolute;
     width: 40px;
     height: 4px;
@@ -74,6 +112,25 @@ nav {
 .nav-toggle-inner:after {
     bottom: -10px;
     transition: bottom 75ms ease .12s,transform 75ms cubic-bezier(.55,.055,.675,.19);
+}
+
+.nav-open .nav-toggle-inner {
+    transition-delay: .12s;
+    transition-timing-function: cubic-bezier(.215,.61,.355,1);
+    transform: rotate(45deg);
+}
+
+.nav-open .nav-toggle-inner:before {
+    top: 0;
+    transition: top 75ms ease, opacity 75ms ease .12s;
+    opacity: 0;
+}
+
+.nav-open .nav-toggle-inner:after {
+    bottom: 0;
+    transition: bottom 75ms ease,transform 75ms cubic-bezier(.215,.61,.355,1) .12s;
+    transform: rotate(
+-90deg);
 }
 
 .nav-open {
@@ -122,6 +179,11 @@ nav {
     nav { 
         background: none;
         height: auto;
+        transition: background 300ms ease-in;
+    }
+
+    nav.nav-solid {
+        background: blueviolet;
     }
 
     #nav-toggle {
@@ -132,10 +194,11 @@ nav {
         flex-direction: row;
         justify-content: flex-end;
         visibility: visible;
+        opacity: 1;
     }
 
     .nav-item {
-        font-size: 20px;
+        font-size: 30px;
         margin-right: 25px;
         padding: 0;
     }
@@ -215,5 +278,22 @@ nav {
     position: absolute;
     width: 100%;
     height: 100%;
+}
+
+.profile-img {
+    flex-basis: 100%;
+}
+
+/* About Section */
+
+@media (min-width: 767px) {
+    .profile-img {
+        flex-basis: 50%;
+    }
+    
+    .profile-text {
+        padding-left: 60px;
+        flex-basis: calc(50% - 60px);
+    }
 }
 
