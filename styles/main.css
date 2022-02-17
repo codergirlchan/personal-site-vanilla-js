@@ -203,7 +203,12 @@ nav {
     nav { 
         background: none;
         height: auto;
-        transition: background 300ms ease-in;
+        top: 0;
+        transition: top 250ms ease-in, background 300ms ease-in;
+    }
+
+    nav.slideUp { 
+        top: -85px;
     }
 
     nav.nav-solid {
