@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Neonderthaw&family=Oswald:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Neonderthaw&family=Oswald&family=VT323:wght@300;400;600&display=swap');
 /* Generic styles for whole page */
 
 html,body {
@@ -6,24 +6,47 @@ html,body {
     padding: 0;
     font-size: 14px;
     font-family: 'Oswald', sans-serif;
+    color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image:url('../assets/storm.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+main {
+    background: rgba(54, 0, 77, 0.9);
 }
 
 .heading {
-    font-weight: 600;
+    font-family: 'VT323', monospace;
+    font-weight: 400;
     text-align: center;
     text-transform: uppercase;
     font-size: 60px;
-    color: blueviolet;
+    color: white;
+    filter: drop-shadow(5px 2px 1px black);
     text-decoration: underline;
+    width: 100%;
 }
 
 .container {
     display: flex;
     flex-direction: column;
     padding: 0 20px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .content {
+    width: 100%;
     max-width: 1024px;
     margin: 0 auto;
     display: flex;
@@ -33,6 +56,7 @@ html,body {
 
 @media (min-width: 767px) { 
     .heading {
+        font-size: 100px;
         margin-bottom: 70px;
     }
 }
@@ -212,10 +236,7 @@ nav {
 
 .hero-header {
     position: relative;
-    background-image:url('http://placecorgi.com/1920/1080');
     height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -239,7 +260,7 @@ nav {
 
 @media (min-width: 1024px) {
     .hero-header h1 { 
-        font-size: 175px;
+        font-size: 125px;
     }
 }
 
@@ -284,6 +305,11 @@ nav {
     flex-basis: 100%;
 }
 
+.profile-text {
+    font-size: 16px;
+    line-height: 32px;
+}
+
 /* About Section */
 
 @media (min-width: 767px) {
@@ -292,8 +318,144 @@ nav {
     }
     
     .profile-text {
+        font-size: 20px;
         padding-left: 60px;
         flex-basis: calc(50% - 60px);
     }
 }
 
+/* Social Section */
+
+#socials .heading {
+    margin-bottom: 30px;
+}
+
+.socials-wrapper {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    list-style: none;
+    flex-basis: 50%;
+    text-align: center;
+    margin: 10px 0;
+}
+
+
+.social-icon i{
+    font-size: 55px;
+    color: blueviolet;
+}
+
+.social-icon a {
+    display: block;
+    transition: all 250ms ease-in;
+}
+
+.social-icon a:focus,
+.social-icon a:hover,
+.social-icon a:active {
+    color: blueviolet;
+}
+
+@media (min-width: 767px) {
+    .social-icon {
+        flex-basis: 25%;
+    }
+
+    .socials-wrapper {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    #socials .heading {
+        margin-bottom: 70px;
+    }
+
+    .social-icon:hover {
+        text-shadow: 4px 3px 3px #ff00ffcc;
+    }
+    
+}
+
+/* Contact Section */
+
+#contact {
+    padding-bottom: 100px;
+}
+
+.contact-form {
+    max-width: 450px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.contact-form label {
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.contact-form.hidden {
+    display: none;
+}
+
+#contact .heading {
+    margin-bottom: 40px;
+}
+
+input {
+    height: 30px;
+}
+
+textarea {
+    height: 300px;
+}
+
+.submit-btn {
+    margin-top: 20px;
+    background: blueviolet;
+    border: 3px solid blueviolet;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    height: 60px;
+    font-weight: 600;
+    transition: all 250ms linear;
+}
+
+.thank-you-section {
+    display: block;
+    width: 100%;
+    font-size: 60px;
+    text-align: center;
+}
+
+.thank-you-section.hidden {
+    display: none;
+}
+
+@media (min-width: 767px) {
+    .submit-btn:hover {
+        background: transparent;
+    }
+}
+
+
+/* Footer Styles */
+
+footer {
+    background: blueviolet;
+    padding: 10px 20px;
+}
+
+footer p {
+    width: 100%;
+    text-align: right;
+    color: white;
+}

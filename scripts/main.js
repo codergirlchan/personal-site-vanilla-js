@@ -17,3 +17,15 @@ document.addEventListener('scroll', function() {
         nav.classList.remove('nav-solid');
     }
 });
+
+// Form Thank You Message
+
+const form = document.querySelector('.contact-form');
+const thankYouSection = document.querySelector('.thank-you-section');
+
+function submitForm() {
+    form.classList.add('hidden');
+    thankYouSection.classList.remove('hidden');
+}
+
+form.onsubmit = submitForm;
