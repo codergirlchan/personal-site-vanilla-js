@@ -7,14 +7,14 @@ function toggleNavClass(className) {
     nav.classList.toggle(className);
 }
 
-toggle.onclick = function() {
+toggle.addEventListener('click', function() {
     toggleNavClass('nav-open');
-}
+});
 
 if(window.screen.width < 768) {
-    navLinks.forEach(link => link.onclick = function() {
-        toggleNavClass('nav-open')
-    }); 
+    navLinks.forEach(link => link.addEventListener('click', function() {
+        toggleNavClass('nav-open');
+    })); 
 }
 
 let scrollTimer; 
@@ -41,12 +41,30 @@ document.addEventListener('scroll', function() {
 
 // Form Thank You Message
 
-const form = document.querySelector('.contact-form');
-const thankYouSection = document.querySelector('.thank-you-section');
+// const form = document.querySelector('.contact-form');
+// const thankYouSection = document.querySelector('.thank-you-section');
 
-function submitForm() {
-    form.classList.add('hidden');
-    thankYouSection.classList.remove('hidden');
-}
+// function submitForm(evt) {
+//     evt.preventDefault();
 
-form.onsubmit = submitForm;
+//     const url = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSf6dlXHsLi_FLxt-6sd2_bwXe0b3pNDWDY_vHDTC-93FNZ3Ww/formResponse';
+
+//     const data = new FormData(evt.target);
+
+//     try {
+//         fetch(url, {
+//             method: 'POST', // *GET, POST, PUT, DELETE, etc.
+//             body: data
+//         });
+
+//         form.classList.add('hidden');
+//         thankYouSection.classList.remove('hidden');
+//     } catch(e) {
+//         form.classList.add('hidden');
+//         // thankYouSection.classList.remove('hidden');
+//     }
+// }
+
+// form.addEventListener('submit', function(){
+//     submitForm(evt);
+// });

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>CoderGirlChan | Streamer</title>
+        <title>CoderGirlChan | Content Creator</title>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <link rel="stylesheet" href="./styles/main.css" />
         <link rel="icon" type="image/png" href="./assets/favicon.png">
@@ -37,7 +37,9 @@
            <section id="about" class="container">
                <h2 class="heading">About</h2>
                <div class="content">
-                    <img class="profile-img" src="./assets/chanelle.jpg" />
+                    <div class="profile-img-wrapper">
+                        <img class="profile-img" src="./assets/chanelle.jpg" />
+                    </div>
                     <p class="profile-text">
                         I'm baby copper mug migas distillery portland vegan brunch synth. DIY food truck woke, street art fanny pack leggings art party pinterest bespoke kale chips. Pug viral slow-carb before they sold out snackwave cred tumblr VHS. Locavore post-ironic knausgaard humblebrag pickled brunch +1 kombucha subway tile tilde brooklyn pinterest cred mumblecore. IPhone succulents yr selfies ennui. Ramps disrupt pitchfork, chillwave crucifix occupy poke cornhole brooklyn cray copper mug.
                         I'm baby copper mug migas distillery portland vegan brunch synth. DIY food truck woke, street art fanny pack leggings art party pinterest bespoke kale chips.
@@ -62,9 +64,19 @@
                                     <i class="fab fa-tiktok"></i>
                                 </a>
                         </li>
-                        <li class="social-icon">
+                        <!-- <li class="social-icon">
                             <a href="https://www.youtube.com/channel/UCxNI_WOuJZIgXnBS5jm2bjA" target="_blank">
                                 <i class="fab fa-youtube"></i>
+                            </a>
+                        </li> -->
+                        <li class="social-icon">
+                            <a href="https://github.com/codergirlchan" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+                        <li class="social-icon">
+                            <a href="mailto:contact@codergirlchan.com" target="_blank">
+                                <i class="fas fa-envelope"></i>
                             </a>
                         </li>
                     </ul>
@@ -73,14 +85,13 @@
            <section id="contact" class="container">
                 <div class="content">
                     <h2 class="heading">Contact</h2>
-                    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSf6dlXHsLi_FLxt-6sd2_bwXe0b3pNDWDY_vHDTC-93FNZ3Ww/formResponse" method="POST" class="contact-form" target="_self">
+                    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSf6dlXHsLi_FLxt-6sd2_bwXe0b3pNDWDY_vHDTC-93FNZ3Ww/formResponse" method="post" class="contact-form" target="_self">
                         <label for="name">Name: </label>
                         <input name="entry.737873188" type="text" required />
                         <label for="email">Email: </label>
                         <input name="entry.1519641207" type="email" required />
                         <label for="message">Message: </label>
-                        <textarea name="entry.1350519973" required placeholder="Type your message here. Leave tacos">
-                        </textarea>
+                        <textarea name="entry.1350519973" required placeholder="Type your message here"></textarea>
                         <input class="submit-btn" type="submit"/>
                     </form>
                     <div class="thank-you-section hidden">
@@ -91,7 +102,7 @@
            </section>
        </main>
        <footer>
-            <div>
+            <div class="container">
                 <p>© 2022 CODERGIRLCHAN</p>
             </div>
        </footer>
