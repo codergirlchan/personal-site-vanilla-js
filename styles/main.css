@@ -55,6 +55,10 @@ main {
     align-items: center;
 }
 
+.purple-text {
+    color: violet;
+}
+
 @media (min-width: 767px) { 
     .heading {
         font-size: 100px;
@@ -327,6 +331,7 @@ nav {
     height: 250px;
     border-radius: 50%;
     overflow: hidden;
+    margin: 0 auto;
 }
 
 .profile-img {
@@ -337,27 +342,63 @@ nav {
 .profile-text {
     font-size: 20px;
     line-height: 36px;
+    margin: 0 auto;
 }
+
+.profile-text-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#about h3 {
+    font-size: 30px;
+    margin: 20px 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.profile-img-container {
+    width: 100%;
+} 
 
 @media (min-width: 767px) {
     #about .heading {
         margin-bottom: 50px;
     }
 
+    #about h3 {
+        text-align: left;
+        font-size: 50px;
+    }    
+
     .profile-img-wrapper {
         width: 300px;
         height: 300px;
     }
-    
+
     .profile-text {
-        width: 65%;
-        margin-top: 40px;
+        width: 100%;
+        margin: 0;
+        width: 80%;
+    }
+    .profile-img-container {
+        width: 50%;
+    } 
+    .profile-text-wrapper {
+        width: 50%;
     }
 }
 
 @media (min-width: 900px) {
     #about .content {
         justify-content: space-between;
+    }
+    .profile-img-container {
+        width: 40%;
+    } 
+    .profile-text-wrapper {
+        width: 60%;
     }
 }
 
@@ -477,9 +518,28 @@ textarea {
     display: none;
 }
 
+.thank-you-section h2 {
+    font-size: 45px;
+    margin-top: 0;
+    color: violet;
+    margin-bottom: 10px;
+}
+
+.thank-you-section p {
+    margin: 0;
+    font-size: 30px;
+}
+
 @media (min-width: 767px) {
     .submit-btn:hover {
         background: transparent;
+    }
+    .thank-you-section h2 {
+        font-size: 60px;
+    }
+    
+    .thank-you-section p {
+        font-size: 35px;
     }
 }
 
