@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>CoderGirlChan | Content Creator</title>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
@@ -11,7 +11,7 @@
        <header>
         <!-- Header Navigation -->
         <nav id="header-nav">
-            <button id="nav-toggle">
+            <button id="nav-toggle" aria-label="open menu">
                 <div class="nav-toggle-box">
                   <div class="nav-toggle-inner"></div>
                 </div>
@@ -39,7 +39,7 @@
                <div class="content">
                    <div class="profile-img-container">
                         <div class="profile-img-wrapper">
-                            <img class="profile-img" src="./assets/chanelle.jpg" />
+                            <img alt="Picture of CoderGirlChan" class="profile-img" src="./assets/chanelle.jpg" />
                         </div>
                    </div>
                     <div class="profile-text-wrapper">
@@ -55,17 +55,17 @@
                 <div class="content">
                     <ul class="socials-wrapper">
                         <li class="social-icon">
-                            <a href="https://www.twitch.tv/codergirlchan" target="_blank">
+                            <a aria-label="link to twitch" href="https://www.twitch.tv/codergirlchan" target="_blank">
                                 <i class="fab fa-twitch"></i>
                             </a>
                         </li>
                         <li class="social-icon">
-                                <a href="https://twitter.com/codergirlchan" target="_blank">
+                                <a aria-label="link to twitter" href="https://twitter.com/codergirlchan" target="_blank">
                                     <i class="fab fa-twitter"></i>
                                 </a>
                         </li>
                         <li class="social-icon">
-                                <a href="https://www.tiktok.com/@codergirlchan" target="_blank">
+                                <a aria-label="link to tiktok" href="https://www.tiktok.com/@codergirlchan" target="_blank">
                                     <i class="fab fa-tiktok"></i>
                                 </a>
                         </li>
@@ -75,12 +75,12 @@
                             </a>
                         </li> -->
                         <li class="social-icon">
-                            <a href="https://github.com/codergirlchan" target="_blank">
+                            <a aria-label="link to github" href="https://github.com/codergirlchan" target="_blank">
                                 <i class="fab fa-github"></i>
                             </a>
                         </li>
                         <li class="social-icon">
-                            <a href="mailto:contact@codergirlchan.com" target="_blank">
+                            <a aria-label="link to email send an email to CoderGirlChan" href="mailto:contact@codergirlchan.com" target="_blank">
                                 <i class="fas fa-envelope"></i>
                             </a>
                         </li>
@@ -92,11 +92,11 @@
                     <h2 class="heading">Contact</h2>
                     <form class="contact-form">
                         <label for="name">Name: </label>
-                        <input name="entry.737873188" type="text" required />
+                        <input id="name" name="entry.737873188" type="text" required />
                         <label for="email">Email: </label>
-                        <input name="entry.1519641207" type="email" required />
+                        <input id="email" name="entry.1519641207" type="email" required />
                         <label for="message">Message: </label>
-                        <textarea name="entry.1350519973" required placeholder="Type your message here"></textarea>
+                        <textarea id="message" name="entry.1350519973" required placeholder="Type your message here"></textarea>
                         <input class="submit-btn" type="submit"/>
                     </form>
                     <div class="thank-you-section hidden">
