@@ -41,34 +41,34 @@ document.addEventListener('scroll', function() {
 
 // Form Thank You Message
 
-const form = document.querySelector('.contact-form');
-const thankYouSection = document.querySelector('.thank-you-section');
-const url = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSf6dlXHsLi_FLxt-6sd2_bwXe0b3pNDWDY_vHDTC-93FNZ3Ww/formResponse';
+// const form = document.querySelector('.contact-form');
+// const thankYouSection = document.querySelector('.thank-you-section');
+// const url = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSf6dlXHsLi_FLxt-6sd2_bwXe0b3pNDWDY_vHDTC-93FNZ3Ww/formResponse';
 
-async function submitForm(e) {
+// async function submitForm(e) {
 
-    const data = new FormData(e.target);
+//     const data = new FormData(e.target);
 
-    try {
-        await fetch(url, {
-            method: 'POST',
-            headers: {
-                'Access-Control-Allow-Origin': '*'
-            },
-            mode: 'no-cors',
-            body: data
-        });
-    } catch(e) {
-        alert(
-            'Form could not be submitted at this time try again later or you can send an email directly to contact@codergirlchan.com'
-        );
-    }
+//     try {
+//         await fetch(url, {
+//             method: 'POST',
+//             headers: {
+//                 'Access-Control-Allow-Origin': '*'
+//             },
+//             mode: 'no-cors',
+//             body: data
+//         });
+//     } catch(e) {
+//         alert(
+//             'Form could not be submitted at this time try again later or you can send an email directly to contact@codergirlchan.com'
+//         );
+//     }
     
-    form.classList.add('hidden');
-    thankYouSection.classList.remove('hidden');
-}
+//     form.classList.add('hidden');
+//     thankYouSection.classList.remove('hidden');
+// }
 
-form.addEventListener('submit', async function(e){
-    e.preventDefault();
-    await submitForm(e);
-});
+// form.addEventListener('submit', async function(e){
+//     e.preventDefault();
+//     await submitForm(e);
+// });

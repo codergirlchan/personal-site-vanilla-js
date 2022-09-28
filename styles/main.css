@@ -2,6 +2,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Neonderthaw&family=Oswald&family=VT323:wght@300;400;600&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+
 html,body {
     margin: 0;
     padding: 0;
@@ -15,10 +18,13 @@ html {
 }
 
 body {
-    background-image:url('../assets/storm.png');
+    /* background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(62, 4, 125, 1) 47%, rgba(0, 0, 0, 1) 100%); */
+    background-image:url('../assets/Sharkult.png');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-attachment: fixed;
+    background-position: center;
+    background-color: black;
 }
 
 main {
@@ -69,7 +75,7 @@ main {
 /* Navigation Styles */
 
 nav { 
-    background:blueviolet;
+    background:#aa88de;
     width: 100%;
     position: fixed;
     z-index: 10;
@@ -217,7 +223,7 @@ nav {
     }
 
     nav.nav-solid {
-        background: blueviolet;
+        background: #aa88de;
     }
 
     #nav-toggle {
@@ -235,6 +241,7 @@ nav {
         font-size: 30px;
         margin-right: 25px;
         padding: 0;
+        text-shadow: 4px 3px 3px #ff00ffcc;
     }
 
     .nav-item:last-child {
@@ -253,13 +260,14 @@ nav {
 }
 
 .hero-header h1 {
-    font-family: 'Neonderthaw', cursive;
+    font-family: 'Permanent Marker', cursive;
     font-size: 50px;
     margin: 0;
     z-index: 1;
-    color: blueviolet;
-    text-shadow: 4px 3px 5px #ff00ffcc;
+    color: #aa88de;
+    text-shadow: 4px 3px 5px red;
     animation: fadein 3s, slidein 1s, turnon 3s ease-in-out;
+    text-align: center;
 }
 
 @media (min-width: 767px) {
@@ -280,7 +288,7 @@ nav {
         text-shadow: 4px 3px 5px Indigo;
     }
     89%, 93%, 100% {
-        color: blueviolet;
+        color: #aa88de;
         text-shadow: 4px 3px 5px #ff00ffcc;
     }
 }
@@ -343,6 +351,7 @@ nav {
     font-size: 20px;
     line-height: 36px;
     margin: 0 auto;
+    margin-bottom: 40px;
 }
 
 .profile-text-wrapper {
@@ -368,7 +377,6 @@ nav {
     }
 
     #about h3 {
-        text-align: left;
         font-size: 50px;
     }    
 
@@ -380,13 +388,8 @@ nav {
     .profile-text {
         width: 100%;
         margin: 0;
-        width: 80%;
-    }
-    .profile-img-container {
-        width: 50%;
-    } 
-    .profile-text-wrapper {
-        width: 50%;
+        margin-bottom: 40px;
+        width: 100%;
     }
 }
 
@@ -394,11 +397,10 @@ nav {
     #about .content {
         justify-content: space-between;
     }
-    .profile-img-container {
-        width: 40%;
-    } 
     .profile-text-wrapper {
         width: 60%;
+        margin: 0 auto;
+        text-align: center;
     }
 }
 
@@ -410,7 +412,7 @@ nav {
 
 .socials-wrapper {
     width: 100%;
-    padding: 0;
+    padding: 0 40px;
     margin: 0;
     display: flex;
     flex-wrap: wrap;
@@ -427,7 +429,7 @@ nav {
 
 .social-icon i{
     font-size: 55px;
-    color: blueviolet;
+    color: #aa88de;
 }
 
 .social-icon a {
@@ -437,7 +439,7 @@ nav {
 
 .social-icon a:focus,
 .social-icon a:active {
-    color: blueviolet;
+    color: #aa88de;
 }
 
 @media (min-width: 767px) {
@@ -497,8 +499,8 @@ textarea {
 
 .submit-btn {
     margin-top: 20px;
-    background: blueviolet;
-    border: 3px solid blueviolet;
+    background: #aa88de;
+    border: 3px solid #aa88de;
     color: white;
     font-family: 'Oswald', sans-serif;
     font-size: 20px;
@@ -547,7 +549,7 @@ textarea {
 /* Footer Styles */
 
 footer {
-    background: blueviolet;
+    background: #aa88de;
     padding: 10px 20px;
 }
 
@@ -559,4 +561,67 @@ footer p {
 
 footer .container {
     min-height: auto;
+}
+
+/* Shop */
+
+.shop-img-wrapper {
+    width: 100%;
+    text-align: center;
+}
+
+.shop-img-wrapper a {
+    display: inline-block;
+}
+
+.shop-img-wrapper img {
+    max-width: 350px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#shop p {
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    margin: 0 auto 60px;
+}
+
+@media (min-width: 767px) {
+    #shop p {
+        width: 50%;
+    }
+}
+
+video {
+    width: 100%;
+    height: auto;
+    margin-top: 60px;
+}
+
+.fa-link {
+    color: white;
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+.mediakit-wrapper {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+.mediakit-wrapper a {
+    display: inline-block;
+}
+
+.mediakit-wrapper a:focus,
+.mediakit-wrapper a:active {
+    color: white;
+}
+
+.mediakit-wrapper p {
+    display: inline-block;
+    font-size: 30px;
+    color: white;
 }
